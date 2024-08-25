@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+float get_tax(int region, char type, float price){
+    float fpa;
+    if (region==16 || region==57 || region==41){
+        if (type=='N'){
+            fpa=price*0.24;
+        }
+        else if(type=='R'){
+            fpa=price*0.13;
+        }
+        else {
+            fpa=price*0.6;}
+    }
+    else if(region==83 || region==85 || region==81){
+        if (type=='N'){
+            fpa=price*0.17;
+        }
+        else if(type=='R'){
+            fpa=price*0.9;
+        }
+        else {
+            fpa=price*0.4;
+        }}
+    else {
+        printf("Invalid Region");
+        return 0;
+    }
+    return fpa;
+}
+int main(){
+    printf("Enter region type price\n");
+    float region,price,fpa;
+    char type;
+    scanf("%f %c %f",&region,&type,&price);
+    fpa=get_tax(region,type,price);
+    printf("%f",fpa);
+
+return 0;
+}
