@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<math.h>
+float get_bmi(float height,float weight)
+{
+    float BMI;
+    BMI = weight/(pow(height,2));
+    return BMI;
+}
+void print_status(float BMI)
+{
+    if (BMI<18.5)
+    {
+        printf("Ellipovares\n");
+    }
+    else if (BMI>18.5 && 25>BMI)
+    {
+        printf("Fysiologiko\n");
+    }
+    else if (BMI>25 && 30>BMI )
+    {
+        printf("Ypervaro\n");
+    }
+    else
+    {
+        printf("Pachysarko\n");
+    }
+}
+
+int main(){
+    float height=1;
+    float weight;
+    while (height!=0){
+    printf("Enter Height :\n");
+    scanf("%f",&height);
+    if (height==0){
+        printf("Goodbye!");
+        break;
+    }
+    printf("Enter Weight :\n");
+    scanf("%f",&weight);
+    float BMI;
+    BMI=get_bmi(height,weight);
+    printf("%f \n",BMI);
+    print_status(BMI);}
+
+    return 0;
+}
