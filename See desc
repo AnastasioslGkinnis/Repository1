@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int main(){
+    float grade,mesos,over=0,ten;
+    float Array[10];
+    for (int i=0;i<10;i++){
+            printf("Enter grade :\n");
+            scanf("%f",&grade);
+            if (grade<0.0 || grade>10.0){
+              while(grade<0.0 || grade>10.0){
+                printf("Wrong grade Enter grade :\n");
+                scanf("%f",&grade);
+              }
+            }
+            Array[i]=grade;
+            mesos+=grade;
+            if (grade==10){
+                ten=i;
+            }}
+    mesos=mesos/10;
+    for (int i=0;i<10;i++){
+        if (Array[i]>mesos){
+            over+=1;
+        }
+    }
+    printf("O mesos einai:%.1f\n Over mesos is:%.1f\n",mesos,over);
+    if (ten>0){
+        printf("Last position with a ten :%f",ten);
+    }else{
+        printf("No grades having 10");}
+
+return 0;}
