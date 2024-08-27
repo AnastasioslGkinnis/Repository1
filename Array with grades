@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+#define N 10
+int main(){
+    int array1[N];
+    int grade,p;
+    for (int i=0;i<10;i++){
+        printf("Add grade :\n");
+        scanf("%d",&grade);
+        array1[i]=grade;
+        if (grade>=5){
+            p=p+1;
+        }
+    }
+
+printf("Number of people over 5 :%d\n",p);
+printf("Number of people under 5 :%d",10-p);
+
+return 0;}
