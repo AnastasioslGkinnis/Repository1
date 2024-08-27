@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+void arraycreation(int arrayc[3][3]){
+    int number;
+    for (int i=0;i<3;i++){
+         for (int o=0;o<3;o++){
+            printf("Add number for %d and column %d\n",o,i);
+            scanf("%d",&number);
+            arrayc[i][o]=number;
+         }}}
+void arrayprinting(int arrayp[3][3]){
+    for (int i=0;i<3;i++){
+            printf("\n");
+         for (int o=0;o<3;o++){
+            printf("%d ",arrayp[i][o]);
+         }}}
+
+void arrayaddition(int array1[3][3],int array2[3][3],int array3[3][3]){
+        for (int i=0;i<3;i++){
+            printf("\n");
+         for (int o=0;o<3;o++){
+            array3[i][o]=array1[i][o]+array1[i][o];
+         }}}
+int main(){
+    int array1[3][3];
+    int array2[3][3];
+    int array3[3][3];
+    arraycreation(array1);
+    arrayprinting(array1);
+    printf("\n");
+    arraycreation(array2);
+    arrayprinting(array2);
+    printf("\n");
+    arrayaddition(array1,array2,array3);
+    printf("By merging the two arrays together we get:\n");
+    arrayprinting(array3);
+return 0;}
